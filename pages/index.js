@@ -19,7 +19,7 @@ export default function Home({count}) {
   const handleOnSubmit = async () => {
     console.log(data.main_url);
     if (data.main_url) {
-      const result = await axios.post("http://localhost:5000/short", data)
+      const result = await axios.post("https://short-url.ataur.dev/short", data)
       set_short_url(result.data.result.short_link_id);
       set_current_url(window.location.origin)
     } else {

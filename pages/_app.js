@@ -6,7 +6,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   const [count, setCount] = useState(0)
   useEffect(() => {
-    axios.post('http://localhost:5000/count')
+    axios.post('https://short-url.ataur.dev/count')
       .then(res => {
         console.log(res.data.response);
         setCount(res.data.response)
